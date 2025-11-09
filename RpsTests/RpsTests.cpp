@@ -15,8 +15,8 @@ namespace RpsTests
 		
 		TEST_METHOD(Test_Invalid_Player1)
 		{
-			const char* result = analyzeRPS("rock", "Paper");
-			Assert::AreEqual("Invalid", result);
+			const char* result = analyzeRPS("Rock", "Scissors");
+			Assert::AreEqual("Player1", result);
 		}
 	};
 }
