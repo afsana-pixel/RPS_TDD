@@ -18,5 +18,11 @@ namespace RpsTests
 			const char* result = analyzeRPS("Rock", "Scissors");
 			Assert::AreEqual("Player1", result);
 		}
+
+		TEST_METHOD(Test_Player2_Wins)
+		{
+			const char* result = analyzeRPS("Scissors", "Rock");
+			Assert::IsTrue(strcmp(result, "Player2") == 0);
+		}
 	};
 }
