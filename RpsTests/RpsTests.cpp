@@ -30,5 +30,11 @@ namespace RpsTests
 			const char* result = analyzeRPS("Paper", "Paper");
 			Assert::IsTrue(strcmp(result, "Draw") == 0);
 		}
+
+		TEST_METHOD(Test_Invalid_Input)
+		{
+			const char* result = analyzeRPS("Banana", "Rock");
+			Assert::IsTrue(strcmp(result, "Invalid") == 0);
+		}
 	};
 }
