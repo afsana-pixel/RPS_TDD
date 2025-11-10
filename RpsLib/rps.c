@@ -6,6 +6,8 @@ const char* analyzeRPS(const char* player1, const char* player2) {
         return "Player1";
     if (strcmp(player1, "Scissors") == 0 && strcmp(player2, "Rock") == 0)
         return "Player2";
+    if (strcmp(player1, player2) == 0)
+		return "Draw";
     
     return "Invalid";
 }
