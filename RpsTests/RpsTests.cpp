@@ -24,5 +24,11 @@ namespace RpsTests
 			const char* result = analyzeRPS("Scissors", "Rock");
 			Assert::IsTrue(strcmp(result, "Player2") == 0);
 		}
+
+		TEST_METHOD(Test_Draw)
+		{
+			const char* result = analyzeRPS("Paper", "Paper");
+			Assert::IsTrue(strcmp(result, "Draw") == 0);
+		}
 	};
 }
